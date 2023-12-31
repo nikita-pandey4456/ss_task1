@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', function () {
         .then(data => {
             const products = data.products;
 
-            // Convert object to array and sort by descending popularity
             const sortedProducts = Object.keys(products)
                 .map(key => ({ id: key, ...products[key] }))
                 .sort((a, b) => b.popularity - a.popularity);
